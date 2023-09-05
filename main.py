@@ -27,10 +27,7 @@ import re
 import os
 import io
 from get_video_info import get_video_attributes, get_video_thumb
-DEF_FORMAT = "480"
-from dotenv import load_dotenv
-load_dotenv()
-os.makedirs("./downloads", exist_ok=True)
+
 API_ID = 9541960
 API_HASH = "17a1aa509b35564481dae98d89d0191d"
 BOT_TOKEN = "6435141772:AAHynl9w9v1om4J_sBsOmIklRI4-aO1UY7Y"
