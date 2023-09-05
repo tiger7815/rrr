@@ -22,16 +22,16 @@ import aiofiles
 from pyrogram.types import User, Message
 # import progressor
 # from progressor import progress_for_pyrogram
-#import sys
+import sys
 import re
 import os
 import io
 
-API_ID = 10577960
-API_HASH = "80fd047285f4e94ca80311928b6bb5da"
-BOT_TOKEN = "6209295583:AAHFIQrlh-780M-bTNfnQzN0Z7qR8m21LKU"
-AUTH_USERS = 5593532344
-sudo_users = [5593532344]
+API_ID = 9541960
+API_HASH = "17a1aa509b35564481dae98d89d0191d"
+BOT_TOKEN = "6435141772:AAHynl9w9v1om4J_sBsOmIklRI4-aO1UY7Y"
+AUTH_USERS =942518345
+sudo_users = [942518345]
 bot = Client(
     "bot",
     bot_token=BOT_TOKEN,
