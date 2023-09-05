@@ -1,10 +1,14 @@
-pyrogram
+pyrogram==1.4.16
 tgcrypto
 requests
-pyromod
+pyromod==1.5
 yt-dlp
 ffmpeg
+psutil
+lxml
+bs4
 aiohttp
 aiofiles
 asyncio
 pycurl
+humanize
