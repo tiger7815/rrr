@@ -52,7 +52,7 @@ async def exec(cmd):
   
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
- editable = await m.reply_text("**Hi BOSS I'm Alive Send /down download and for classplus send /cpd  for /dhurina for /vision**")
+ editable = await m.reply_text("**Hi Owner I'm Alive Send /down download and for classplus send /clps  for /dhurina for /vision**")
 
 @bot.on_message(filters.command(["down"]))
 async def account_login(bot: Client, m: Message):
@@ -195,7 +195,7 @@ async def cancel(_, m):
 async def restart_handler(_, m):
     await m.reply_text("Restarted!", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
-@bot.on_message(filters.command(["cpd"]))
+@bot.on_message(filters.command(["clps"]))
 async def account_login(bot: Client, m: Message):
     
     editable = await m.reply_text("Send txt file")
