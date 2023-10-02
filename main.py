@@ -52,7 +52,7 @@ async def exec(cmd):
   
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
- editable = await m.reply_text("**Hi Bhai I'm Alive Send /down download and for classplus send /clps  for /dhurina for /vision**")
+ editable = await m.reply_text("**Jay Shree Ram ❤️ (LPRPDV)I'm Alive Send /down download and for classplus send /clps  for /dhurina for /vision**")
 
 @bot.on_message(filters.command(["down"]))
 async def account_login(bot: Client, m: Message):
@@ -198,7 +198,7 @@ async def restart_handler(_, m):
 @bot.on_message(filters.command(["clps"]))
 async def account_login(bot: Client, m: Message):
     
-    editable = await m.reply_text("Send txt file")
+    editable = await m.reply_text("Hey Send txt file📥")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -230,11 +230,11 @@ async def account_login(bot: Client, m: Message):
     except:
         arg = 0
 
-    editable = await m.reply_text("**Enter Title**")
+    editable = await m.reply_text("**Enter Title📥**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text0 = input0.text
 
-    await m.reply_text("**Enter resolution**")
+    await m.reply_text("**Enter resolution📥**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
 
@@ -484,8 +484,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**DownloadingByLPRPDV:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**LPRPDV.Batch :-** {raw_text0}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.LPRPDV.pdf\n\n**Batch :-** {raw_text0}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch by LPRPDV:-** {raw_text0}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf by LPRPDV\n\n**Batch :-** {raw_text0}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
