@@ -52,7 +52,7 @@ async def exec(cmd):
   
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
- editable = await m.reply_text("**Jay Shree Ram ❤️ (LPRPDV)I'm Alive Send /down download and for classplus send /LPRPDV  for /dhurina for /vision**")
+ editable = await m.reply_text("**JAY SHREE RAM Bhai 🙏I'm Alive Send /down download and for classplus send /clps  for /dhurina for /vision**")
 
 @bot.on_message(filters.command(["down"]))
 async def account_login(bot: Client, m: Message):
@@ -186,7 +186,7 @@ async def account_login(bot: Client, m: Message):
 
 @bot.on_message(filters.command(["cancel"]))
 async def cancel(_, m):
-    editable = await m.reply_text("Canceling All process Plz wait")
+    editable = await m.reply_text("Canceling ❌ All process Plz wait")
     global cancel
     cancel = True
     await editable.edit("cancled")
@@ -195,7 +195,7 @@ async def cancel(_, m):
 async def restart_handler(_, m):
     await m.reply_text("Restarted!", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
-@bot.on_message(filters.command(["LPRPDV"]))
+@bot.on_message(filters.command(["clps"]))
 async def account_login(bot: Client, m: Message):
     
     editable = await m.reply_text("Hey Send txt file📥")
@@ -458,28 +458,28 @@ async def account_login(bot: Client, m: Message):
             # if "youtu" in url:
             # if ytf == f"'bestvideo[height<={raw_text2}][ext=mp4]+bestaudio[ext=m4a]'" or "acecwply" in url:
             if "acecwply" in url:
-                cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={raw_text2}]+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video mkv --no-warning "{url}"'
+                cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={raw_text2}]+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video LPRPDV.mkv --no-warning "{url}"'
             if "youtu" in url:
-                cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={int(raw_text2)}]+bestaudio" --no-keep-video --remux-video mkv "{url}"'
+                cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={int(raw_text2)}]+bestaudio" --no-keep-video --remux-video LPRPDV.mkv "{url}"'
             elif "videos.classplusapp" in url:
             	headers = {'Host': 'api.classplusapp.com', 'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0', 'user-agent': 'Mobile-Android', 'app-version': '1.4.37.1', 'api-version': '18', 'device-id': '5d0d17ac8b3c9f51', 'device-details': '2848b866799971ca_2848b8667a33216c_SDK-30', 'accept-encoding': 'gzip'}
             	params = (('url', f'{url}'),)
             	response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
             	url = response.json()['url']
-            	cmd = f'yt-dlp -o "{name}.%(ext)s" --no-keep-video --remux-video mkv "{url}"'
+            	cmd = f'yt-dlp -o "{name}.%(ext)s" --no-keep-video --remux-video LPRPDV.mkv "{url}"'
             elif "player.vimeo" in url:
-                cmd = f'yt-dlp -f "{ytf}+bestaudio" --no-keep-video --remux-video mkv "{url}" -o "{name}.%(ext)s"'
+                cmd = f'yt-dlp -f "{ytf}+bestaudio" --no-keep-video --remux-video LPRPDV.mkv "{url}" -o "{name}.%(ext)s"'
             elif "m3u8" or "livestream" in url:
                 if "classplus" in url:
-                    cmd = f'yt-dlp --no-keep-video --no-check-certificate --remux-video mkv "{url}" -o "{name}.%(ext)s"'
+                    cmd = f'yt-dlp --no-keep-video --no-check-certificate --remux-video LPRPDV.mkv "{url}" -o "{name}.%(ext)s"'
                 else:
-                    cmd = f'yt-dlp -f "{ytf}" --no-check-certificate --remux-video mkv "{url}" -o "{name}.%(ext)s"'
+                    cmd = f'yt-dlp -f "{ytf}" --no-check-certificate --remux-video LPRPDV.mkv "{url}" -o "{name}.%(ext)s"'
             elif ytf == "0" or "unknown" in out:
-                cmd = f'yt-dlp -f "{ytf}" --no-keep-video --remux-video mkv "{url}" -o "{name}.%(ext)s"'
+                cmd = f'yt-dlp -f "{ytf}" --no-keep-video --remux-video LPRPDV.mkv "{url}" -o "{name}.%(ext)s"'
             elif ".pdf" or "download" in url:
                 cmd = "pdf"
             else:
-                cmd = f'yt-dlp -f "{ytf}+bestaudio" --hls-prefer-ffmpeg --no-keep-video --no-check-certificate --remux-video mkv "{url}" -o "{name}.%(ext)s"'
+                cmd = f'yt-dlp -f "{ytf}+bestaudio" --hls-prefer-ffmpeg --no-keep-video --no-check-certificate --remux-video LPRPDV.mkv "{url}" -o "{name}.%(ext)s"'
             print(cmd)
             try:
                 Show = f"**Downloading By LPRPDV📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
