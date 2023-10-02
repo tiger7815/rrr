@@ -52,7 +52,7 @@ async def exec(cmd):
   
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
- editable = await m.reply_text("**Jay Shree Ram ❤️ (LPRPDV)I'm Alive Send /down download and for classplus send /clps  for /dhurina for /vision**")
+ editable = await m.reply_text("**Jay Shree Ram ❤️ (LPRPDV)I'm Alive Send /down download and for classplus send /LPRPDV  for /dhurina for /vision**")
 
 @bot.on_message(filters.command(["down"]))
 async def account_login(bot: Client, m: Message):
@@ -195,7 +195,7 @@ async def cancel(_, m):
 async def restart_handler(_, m):
     await m.reply_text("Restarted!", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
-@bot.on_message(filters.command(["clps"]))
+@bot.on_message(filters.command(["LPRPDV"]))
 async def account_login(bot: Client, m: Message):
     
     editable = await m.reply_text("Hey Send txt file📥")
@@ -260,7 +260,7 @@ async def account_login(bot: Client, m: Message):
         for i in range(arg, len(links)):
 
             url = links[i][1]
-            name1 = links[i][0].replace("\t", "").replace(":", "").replace("/","").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*","").replace("download",".pdf").replace(".","").strip()
+            name1 = links[i][0].replace("\t", "").replace(":", "").replace("/","").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*","").replace("download",".pdf").replace(".","").strip()LPRPDV 
             if ".pdf" in url or "pdf" in name1:
                 name = f"{str(count).zfill(3)}) {name1.replace('pdf', '')} LPRPDV.pdf"
                 r = requests.get(url, allow_redirects=True)
@@ -482,7 +482,7 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}+bestaudio" --hls-prefer-ffmpeg --no-keep-video --no-check-certificate --remux-video mkv "{url}" -o "{name}.%(ext)s"'
             print(cmd)
             try:
-                Show = f"**DownloadingByLPRPDV:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
+                Show = f"**Downloading By LPRPDV📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
                 cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch by LPRPDV:-** {raw_text0}'
                 cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf by LPRPDV\n\n**Batch :-** {raw_text0}'
@@ -511,7 +511,7 @@ async def account_login(bot: Client, m: Message):
                         ka = await helper.aio(url, name)
                         await prog.delete(True)
                         time.sleep(1)
-                        reply = await m.reply_text(f"Uploading by LPRPDV- ```{name}```")
+                        reply = await m.reply_text(f"Uploading by LPRPDV📥- ```{name}```")
                         time.sleep(1)
                         start_time = time.time()
                         await m.reply_document(
@@ -545,7 +545,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("Done✅")
+    await m.reply_text("✅Done✅")
     
 @bot.on_message(filters.command(["dhurivvna"]))
 async def account_login(bot: Client, m: Message):
