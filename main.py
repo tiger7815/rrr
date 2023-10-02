@@ -195,7 +195,7 @@ async def cancel(_, m):
 async def restart_handler(_, m):
     await m.reply_text("Restarted!", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
-@bot.on_message(filters.command(["LPRPDV"]))
+@bot.on_message(filters.command(["clps"]))
 async def account_login(bot: Client, m: Message):
     
     editable = await m.reply_text("Send txt file")
@@ -482,7 +482,7 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}+bestaudio" --hls-prefer-ffmpeg --no-keep-video --no-check-certificate --remux-video mkv "{url}" -o "{name}.%(ext)s"'
             print(cmd)
             try:
-                Show = f"**Downloading By LPRPDV:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
+                Show = f"**DownloadingByLPRPDV:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
                 cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**LPRPDV.Batch :-** {raw_text0}'
                 cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.LPRPDV.pdf\n\n**Batch :-** {raw_text0}'
@@ -676,7 +676,7 @@ async def account_login(bot: Client, m: Message):
                     filename = f"{name}.pdf"
 
 
-#                 filename = f"{name}.mkv"
+#                 filename = f"{name}.LPRPDV.mkv"
                 subprocess.run(
                     f'ffmpeg -i "{filename}" -ss 00:01:00 -vframes 1 "{filename}.jpg"',
                     shell=True)
@@ -720,7 +720,7 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text(e)
     await m.reply_text("Done")
     
-@bot.on_message(filters.command(["vision"]))
+@bot.on_message(filters.command(["LPRPDV"]))
 async def account_login(bot: Client, m: Message):
     
     editable = await m.reply_text("Send txt file")
@@ -774,7 +774,7 @@ async def account_login(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1}'
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url}`\n\n`"
             prog = await m.reply_text(Show)
-            cc = f'**Name »** {name1}.mp4\n**Batch »** {raw_text5}\n**Index »** {str(count).zfill(3)}'
+            cc = f'**Name »** {name1}.LPRPDV.mp4\n**Batch »** {raw_text5}\n**Index »** {str(count).zfill(3)}'
             if "youtu" or "vision" in url:
                 cmd = f'yt-dlp "{url}" -o "{name}"'
             elif "player.vimeo" in url:
@@ -797,6 +797,6 @@ async def account_login(bot: Client, m: Message):
                 continue
     except Exception as e:
         await m.reply_text(str(e))
-    await m.reply_text("Done")
+    await m.reply_text("Done✅")
     
 bot.run()    
