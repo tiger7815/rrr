@@ -30,7 +30,7 @@ from get_video_info import get_video_attributes, get_video_thumb
 
 API_ID = 26368249
 API_HASH = "ac2db262d5eb7ce0efc0162404c8d172"
-BOT_TOKEN = "6499406599:AAGXXpR0cnMUQKihG4HUhPPQeZpc0p2Q-Xs"
+BOT_TOKEN = "6504918956:AAH-47Xg995EYliDmhQuzfG0JA65QLWF5Zg"
 AUTH_USERS = 5684410709
 sudo_users = [5684410709]
 bot = Client(
@@ -237,6 +237,10 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("**Enter resolution📥**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
+
+    editable = await editable.edit("**Downloaded By**")
+    input0: Message = await bot.listen(editable.chat.id)
+    raw_text0 = input0.text
 
     editable4 = await m.reply_text(
         "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
