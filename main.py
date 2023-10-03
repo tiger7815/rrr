@@ -238,7 +238,7 @@ async def account_login(bot: Client, m: Message):
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
 
-    editable = await editable.edit("**Downloaded By**")
+    editable = await editable.edit("**Downloaded By📥**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text0 = input0.text
 
@@ -266,7 +266,7 @@ async def account_login(bot: Client, m: Message):
             url = links[i][1]
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/","").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*","").replace("download",".pdf").replace(".","").strip()
             if ".pdf" in url or "pdf" in name1:
-                name = f"{str(count).zfill(3)}) {name1.replace('pdf', '')} LPRPDV.pdf"
+                name = f"{str(count).zfill(3)}) {name1.replace('pdf', '')}.pdf"
                 r = requests.get(url, allow_redirects=True)
                 if r.status_code != 200:
                     print("Error", name)
@@ -486,10 +486,10 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}+bestaudio" --hls-prefer-ffmpeg --no-keep-video --no-check-certificate --remux-video mkv "{url}" -o "{name}.%(ext)s"'
             print(cmd)
             try:
-                Show = f"**Downloading By LPRPDV📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
+                Show = f"**Downloading 📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch by LPRPDV:-** {raw_text0}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf by LPRPDV\n\n**Batch :-** {raw_text0}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch :-** {raw_text0}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf\n\n**Batch :-** {raw_text0}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
@@ -515,13 +515,13 @@ async def account_login(bot: Client, m: Message):
                         ka = await helper.aio(url, name)
                         await prog.delete(True)
                         time.sleep(1)
-                        reply = await m.reply_text(f"Uploading by LPRPDV📥- ```{name}```")
+                        reply = await m.reply_text(f"Uploading 📥- ```{name}```")
                         time.sleep(1)
                         start_time = time.time()
                         await m.reply_document(
                             ka,
                             caption=
-                            f'**Title »** {name1} {res}.LPRPDV.pdf\n\n**Caption »** {raw_text0}\n\n**Index »** {str(count).zfill(3)}'
+                            f'**Title »** {name1} {res}.pdf\n\n**Caption »** {raw_text0}\n\n**Index »** {str(count).zfill(3)}'
                         )
                         count += 1
                         # time.sleep(1)
